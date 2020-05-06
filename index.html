@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library App</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="src/main.js" type="module"></script>
+    </head>
+    <body>
+        <div class="app-container flex-column-center">
+            <div class="title-container flex-row-center">
+                <h1 class="title">Library App</h1>
+            </div>
+            <div class="library-container flex-column-center">
+                <button class="add-book">Add a New Book</button>
+                <form class="book-form flex-column-space-evenly hidden">
+                    <div class="form-element">
+                        <label for="title">Title</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div class="form-element">
+                        <label for="author">Author</label>
+                        <input type="text" id="author">
+                    </div>
+                    <div class="form-element">
+                        <label for="pages">Pages</label>
+                        <input type="text" id="pages">
+                    </div>
+                    <div class="read-input flex-row-flex-start full-width">
+                        <label for="read">Have you read the book?</label>
+                        <input type="checkbox" id="read">
+                    </div>
+                    <div class="submit-cancel flex-row-space-between">
+                        <button type="submit" id="submit">Submit</button>
+                        <button type="button" id="cancel">Cancel</button>
+                    </div>
+                </form>
+                <table class="library">
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Completed</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
