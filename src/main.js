@@ -7,5 +7,6 @@ function init() {
     let myLibrary = new Library();
     let form = new Form();
     form.registerLibrary(myLibrary);
+    myLibrary.render();
 }
 

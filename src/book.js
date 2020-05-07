@@ -12,6 +12,11 @@ class Book {
             let td = this.buildTableCell(this[prop]);
             row.appendChild(td);
         }
+        let finalTd = document.createElement('td');
+        let removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        finalTd.appendChild(removeButton);
+        row.appendChild(finalTd);
         return row;
     }
 

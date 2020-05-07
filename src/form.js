@@ -39,10 +39,10 @@ class Form {
     }
 
     clearFields() {
-        this.authorInput.textContent = '';
-            this.titleInput.textContent = '';
-            this.pagesInput.textContent = '';
-            this.alreadyReadInput.checked = false;
+        this.authorInput.value = '';
+        this.titleInput.value = '';
+        this.pagesInput.value = '';
+        this.alreadyReadInput.checked = false;
     }
 
     registerLibrary(library) {
@@ -54,7 +54,10 @@ class Form {
             let read = this.alreadyReadInput.checked;
             let book = new Book(title, author, pages, read);
             library.addBook(book);
-            library.render();
+            library.addRow(book);
+            this.addButton.classList.remove('hidden');
+            this.formContainer.classList.add('hidden');
+            this.clearFields();
         });
     }
 }
